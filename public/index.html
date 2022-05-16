@@ -21,6 +21,7 @@
           >7</span
         >
       </div>
+
       <!-- app content -->
       <div class="container max-w-screen-sm mx-auto">
         <!-- category form -->
@@ -63,6 +64,7 @@
               </button>
               <button
                 class="flex-1 bg-slate-500 text-slate-200 rounded-xl py-2"
+                id="add-new-category"
               >
                 Add New Category
               </button>
@@ -109,17 +111,7 @@
                 name="product-category"
                 id="product-category"
                 class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full"
-              >
-                <option value="" class="bg-slate-500 text-slate-300">
-                  select a category
-                </option>
-                <option value="backend" class="bg-slate-500 text-slate-300">
-                  backend
-                </option>
-                <option value="frontend" class="bg-slate-500 text-slate-300">
-                  frontend
-                </option>
-              </select>
+              ></select>
             </div>
             <div class="flex justify-between items-center gap-x-4">
               <button
@@ -154,5 +146,7 @@
         </div>
       </div>
     </div>
+
+    <script src="../src/js/app.js" type="module"></script>
   </body>
 </html>
