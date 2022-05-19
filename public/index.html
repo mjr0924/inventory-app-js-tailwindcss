@@ -126,11 +126,20 @@
 
         <!-- product list -->
         <h2 class="text-xl text-slate-300 font-bold mb-2">Product list</h2>
+        <div class="flex justify-between items-center my-4">
+          <label for="search-input" class="text-lg text-slate-500"
+            >Search</label
+          >
+          <input
+            type="search"
+            name="search-input"
+            id="search-input"
+            class="bg-transparent rounded-xl border border-slate-500 text-slate-400"
+          />
+        </div>
         <div id="products-list" class="pb-20"></div>
       </div>
     </div>
-
-    
 
     <script src="../src/js/app.js" type="module"></script>
   </body>
