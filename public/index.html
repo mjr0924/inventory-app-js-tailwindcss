@@ -137,6 +137,24 @@
             class="bg-transparent rounded-xl border border-slate-500 text-slate-400"
           />
         </div>
+        <div class="flex justify-between items-center my-4">
+          <label for="sort-products" class="text-lg text-slate-500">Sort</label>
+          <select
+            name="sort-products"
+            id="sort-products"
+            class="bg-transparent rounded-xl border border-slate-500 text-slate-400"
+          >
+            <option class="bg-slate-500 text-slate-300" disabled value="">
+              select a category
+            </option>
+            <option class="bg-slate-500 text-slate-300" selected value="newest">
+              newest
+            </option>
+            <option class="bg-slate-500 text-slate-300" value="oldest">
+              oldest
+            </option>
+          </select>
+        </div>
         <div id="products-list" class="pb-20"></div>
       </div>
     </div>
