@@ -48,9 +48,9 @@ class ProductView {
           class="flex justify-center items-center w-7 h-7 rounded-full bg-slate-500 border-2 border-slate-300 text-slate-300"
           >${item.quantity}</span
         >
-        <button
-          class="border px-2 py-0.5 rounded-2xl border-red-400 text-red-400"
-          data-id="${item.id}"
+        <button 
+          class="delete-product border px-2 py-0.5 rounded-2xl border-red-400 text-red-400"
+          data-product-id="${item.id}"
         >
           delete
         </button>
@@ -60,6 +60,10 @@ class ProductView {
     });
     const productsDOM = document.querySelector("#products-list");
     productsDOM.innerHTML = result;
+    const deleteBtns = [...document.querySelectorAll(".delete-product")];
+    deleteBtns.forEach((item) => {
+      item.addEventListener("click", (e) => this.deleteProduct(e));
+    });
   }
   searchProducts(e) {
     const value = e.target.value.trim().toLowerCase();
@@ -71,6 +75,12 @@ class ProductView {
   sortProducts(e) {
     const value = e.target.value;
     this.products = Storage.getAllProducts(value);
+    this.createProductsList(this.products);
+  }
+  deleteProduct(e) {
+    const productId = e.target.dataset.productId;
+    Storage.deleteProduct(productId);
+    this.products = Storage.getAllProducts();
     this.createProductsList(this.products);
   }
 }
