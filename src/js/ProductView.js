@@ -3,6 +3,7 @@ import Storage from "./Storage.js";
 const addNewProductBtn = document.querySelector("#add-new-product");
 const searchInput = document.querySelector("#search-input");
 const selectedSort = document.querySelector("#sort-products");
+
 class ProductView {
   constructor() {
     addNewProductBtn.addEventListener("click", (e) => this.addNewProduct(e));
@@ -13,6 +14,17 @@ class ProductView {
 
   setApp() {
     this.products = Storage.getAllProducts();
+  }
+
+  setYear() {
+    const year = document.querySelector(".year");
+    let x = new Date().getFullYear();
+    year.innerHTML = x;
+  }
+
+  countProduct() {
+    const countProduct = document.querySelector("#count-product");
+    countProduct.innerHTML = Storage.getAllProducts().length;
   }
 
   addNewProduct(e) {
@@ -65,6 +77,7 @@ class ProductView {
       item.addEventListener("click", (e) => this.deleteProduct(e));
     });
   }
+
   searchProducts(e) {
     const value = e.target.value.trim().toLowerCase();
     const filteredProducts = this.products.filter((p) =>
@@ -72,11 +85,13 @@ class ProductView {
     );
     this.createProductsList(filteredProducts);
   }
+
   sortProducts(e) {
     const value = e.target.value;
     this.products = Storage.getAllProducts(value);
     this.createProductsList(this.products);
   }
+
   deleteProduct(e) {
     const productId = e.target.dataset.productId;
     Storage.deleteProduct(productId);

@@ -4,7 +4,8 @@ import ProductView from "./ProductView.js";
 document.addEventListener("DOMContentLoaded", () => {
   CategoryView.setApp();
   ProductView.setApp();
-  console.log(ProductView);
+  ProductView.setYear();
+  ProductView.countProduct();
   CategoryView.createCategoriesList();
   ProductView.createProductsList(ProductView.products);
 });

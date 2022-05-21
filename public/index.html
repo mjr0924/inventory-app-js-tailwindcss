@@ -14,11 +14,12 @@
         class="h-12 flex items-center justify-center gap-x-4 bg-slate-700 mb-6"
       >
         <h1 class="text-xl font-bold text-slate-300">
-          Inventory App using tailwind & Js
+          Inventory App using tailwindcss & Js
         </h1>
         <span
+          id="count-product"
           class="flex justify-center items-center w-7 h-7 rounded-full bg-slate-500 border-2 border-slate-300 font-bold text-slate-300"
-          >7</span
+          ></span
         >
       </div>
 
@@ -165,8 +166,18 @@
             </option>
           </select>
         </div>
-        <div id="products-list" class="pb-20"></div>
+        <div id="products-list"></div>
       </div>
+
+      <footer>
+        <div
+          class="h-12 flex items-center justify-center gap-x-4 bg-slate-700 mt-10"
+        >
+          <h1 class="text-lg text-slate-300">
+            wpyaar © <span class="year"></span> All rights reserved
+          </h1>
+        </div>
+      </footer>
     </div>
 
     <script src="../src/js/app.js" type="module"></script>
