@@ -981,6 +981,12 @@ select {
 .w-full {
   width: 100%;
 }
+.w-1\/2 {
+  width: 50%;
+}
+.w-1 {
+  width: 0.25rem;
+}
 .max-w-screen-sm {
   max-width: 640px;
 }

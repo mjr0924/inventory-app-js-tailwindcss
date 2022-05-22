@@ -35,7 +35,7 @@ class CategoryView {
   }
   createCategoriesList() {
     let result = `
-    <option disabled value="" class="bg-slate-500 text-slate-300">select a category
+    <option disabled selected value="" class="bg-slate-500 text-slate-300">select a category
     </option>`;
     this.categories.forEach((element) => {
       result += `

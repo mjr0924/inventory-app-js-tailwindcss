@@ -38,6 +38,8 @@ class ProductView {
     Storage.saveProducts({ title, quantity, category, time });
     this.products = Storage.getAllProducts();
     this.createProductsList(this.products);
+    document.querySelector("#product-title").value = "";
+    document.querySelector("#product-quantity").value = "";
   }
 
   createProductsList(products) {
