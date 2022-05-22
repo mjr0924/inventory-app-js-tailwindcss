@@ -81,6 +81,7 @@ export default class Storage {
       existedItem.title = productToSave.title;
       existedItem.quantity = productToSave.quantity;
       existedItem.category = productToSave.category;
+      existedItem.time = productToSave.time;
     } else {
       //new
       productToSave.id = new Date().getTime();
